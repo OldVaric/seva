@@ -1,0 +1,22 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Статьи на сайте{% endblock %}
+
+{% block content %}
+<div class="features">
+    {% for i in result %}
+    <h1>Результат поиска</h1>
+
+        <form action="{% url 'search' %}" method="get">
+                <input name="q" type="search" type="text" placeholder="Поиск...">
+                <button type="submit" class="btn btn-success">Найти</button>
+        </form>
+        <div class="alert alert-warning">
+            <h3 class="title">{{ i.title }}</h3>
+            <p class="anons">{{ i.anons }}</p>
+
+            <a href="{% url 'news-detail' i.id %}" class="btn btn-warning">Чиатать статью</a>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

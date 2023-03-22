@@ -1,0 +1,13 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Страница про нас{% endblock %}
+
+{% block content %}
+     <div class="features">
+        <h1>Страница о нас</h1>
+        <p><a href="https://vk.com/old_varic" style="font-size:50px; color:white;"><i class="fa-brands fa-vk"></i></a></p>
+        <p><a href="https://t.me/OldVaric" style="font-size:50px; color:white;"><i class="fa-brands fa-telegram"></i></a></p>
+         <p><a href="https://t.me/Old_Varic" style="font-size:50px; color:white;"><i class="fa-regular fa-comment"></i><i class="fa-brands fa-telegram" style="font-size:35px;"></i></a></p>
+         <a href="{% url 'home' %}" class="btn btn-warning">На главную</a>
+    </div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+
+<div class="features">
+        <h1>Регистрация</h1>
+        <form method="post">
+           {% csrf_token %}
+           {{ form.as_ul }}
+          <button type="submit" class="btn btn-success">Регистрация</button>
+        </form>
+</div>
+
+{% endblock content %}
